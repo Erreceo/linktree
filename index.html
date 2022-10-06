@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Rodrigo Oliveira</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <head>
+    <div class='header'>
+      <div>
+        <img src='./assets//avatar.jpeg' />
+      </div>
+      <h1>Rodrigo Oliveira</h1>
+    </div>
+  </head>
+  <main>
+    <ul>
+      <li>
+        <div>
+          <img src="./assets/github.svg" />
+          <a id='github' href="https://github.com/erreceo">GitHub</a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src="./assets/linkedin.svg" />
+          <a id='linkedin' href="https://www.linkedin.com/in/rodrigo-cardoso-oliveira"> LinkedIn
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src="./assets/instagram.svg" />
+          <a href="https://www.instagram.com/erreceo.dev">Instagram</a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src="./assets/twitter.svg" />
+          <a href="https://twitter.com/ErreceoD">Twitter</a>
+        </div>
+      </li>
+    </ul>
+  </main>
+  <script>
+    let list = document.querySelectorAll('li');
+    let time = 1;
+    list.forEach(item => {
+      item.setAttribute('style', `animation: li_animation ${time}s 1;-webkit-animation: li_animation ${time}s 1;`)
+      time += 0.5
+    })
+
+    document.querySelectorAll('li > div').forEach(el => {
+      el.addEventListener('click', e => {
+        window.location.href = e.currentTarget.lastElementChild.href
+      })
+    })
+
+  </script>
+</body>
+
+</html>
